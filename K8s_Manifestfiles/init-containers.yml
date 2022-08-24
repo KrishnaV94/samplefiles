@@ -9,11 +9,10 @@ spec:
       image: jenkins/jenkins:lts
       ports:
         - containerPort: 8080
-  init-containers:
+  initContainers:
     - name: init-api-service
       image: alpine:3
-      command: ["sleep", "10s"]
-  init-containers:
+      command: ["sleep", "5s"]
     - name: init-db-service
       image: alpine:3
-      command: ["sleep", "10s"]
+      command: ["sleep", "5s"]
