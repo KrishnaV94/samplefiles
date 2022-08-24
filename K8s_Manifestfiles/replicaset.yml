@@ -15,10 +15,10 @@ spec:
       version: "1.23.0"
   template:
     metadata:
-    name: nginx
-    labels:
-      app: nginx
-      version: "1.23.0"
+      name: nginx
+      labels:
+        app: nginx
+        version: "1.23.0"
     spec:
       - containers:
         - image: nginx:1.23.0
