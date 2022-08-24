@@ -2,9 +2,11 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: myalpine
+  name: ouralpine
 spec:
   containers:
-    - image: alpine:v1.23.0
-      name: myalpine
-      command: ["sleep", "1d"]
+    - name: ouralpine
+      image: alpine:3
+      command:
+        - sleep
+        -  1d
