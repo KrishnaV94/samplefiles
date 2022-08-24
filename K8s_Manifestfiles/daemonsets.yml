@@ -13,7 +13,7 @@ spec:
       - key: app
         operator: In
         values:
-          - fluentd-ds
+          - fluentd
   template:
     metadata:
       name: fluentd-ds
