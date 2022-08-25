@@ -1,0 +1,15 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: loadbalancer-service
+spec:
+  - ports:
+      port: 80
+      name: nginx
+      protocol: TCP
+      nodePort:
+        type: LoadBalancer
+    selector:
+      name: nginx
+      version: "1.23.0"
