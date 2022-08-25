@@ -12,4 +12,3 @@ spec:
         type: LoadBalancer
     selector:
       name: nginx
-      version: "1.23.0"
