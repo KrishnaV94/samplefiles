@@ -7,11 +7,9 @@ metadata:
     topic: CronJobs
 spec:
   jobTemplate:
-    - jobTemplate.metadata:
+    - metadata:
         name: Cron-job
-      jobTemplate.spec:
-        completions: 10
-        parallelism: 5
+      spec:
         template:
           metadata:
             name: Cron-job
@@ -23,7 +21,6 @@ spec:
                   - "sleep"
                   -  "10s"
   schedule: "*/5****"
-  timezone:
-    TZ: Asia/Kolkata
+
 
 
