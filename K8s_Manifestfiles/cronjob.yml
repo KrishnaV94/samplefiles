@@ -1,0 +1,29 @@
+---
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: Cron-job
+  labels:
+    topic: CronJobs
+spec:
+  jobTemplate:
+    - jobTemplate.metadata:
+        name: Cron-job
+      jobTemplate.spec:
+        completions: 10
+        parallelism: 5
+        template:
+          metadata:
+            name: Cron-job
+          spec:
+            containers:
+              - name: Cron-job
+                image: alpine:3
+                command:
+                  - "sleep"
+                  -  "10s"
+  schedule: "*/5****"
+  timezone:
+    TZ: Asia/Kolkata
+
+
