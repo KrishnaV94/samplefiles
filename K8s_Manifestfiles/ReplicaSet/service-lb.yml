@@ -8,7 +8,6 @@ spec:
       port: 80
       name: nginx
       protocol: TCP
-      nodePort:
-        type: LoadBalancer
+      type: LoadBalancer
     selector:
       name: nginx

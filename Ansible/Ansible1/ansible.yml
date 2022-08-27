@@ -1,0 +1,10 @@
+---
+- name: Create a file
+  hosts: all
+  become: yes
+  tasks:
+    - name: Create a text file
+      ansible.builtin.file:
+      path: C:\temp\1.txt
+      state: touch
+      mode: u=rwx,g=rwx,o=rwx
